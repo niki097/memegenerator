@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import Edit from './pages/Edit';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='mx-3 mt-3 text-center'>Meme Generator</h1>
+   <Routes>
+    <Route path='/' element={<Home />}/>
+    <Route path='/edit' element={<Edit />}/>
+   </Routes>
     </div>
   );
 }
